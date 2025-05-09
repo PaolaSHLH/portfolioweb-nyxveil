@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="IMG/Png/Icon.png">
+  <title>Nyxveil</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+
+  <div class="form-message hidden">¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto 💌</div>
+
+  <div class="form-wrapper">
+    <form class="form-contact">
+      <div class="input-field">
+        <label class="label" for="name">Name</label>
+        <input class="input" type="text" id="name" placeholder="Your name" />
+      </div>
+
+      <div class="input-field">
+        <label class="label" for="email">Email</label>
+        <input class="input" type="email" id="email" placeholder="you@example.com" />
+      </div>
+
+      <div class="input-field">
+        <label class="label" for="subject">Subject</label>
+        <input class="input" type="text" id="subject" placeholder="Subject..." />
+      </div>
+
+      <div class="textarea-field">
+        <label class="label" for="message">Message</label>
+        <textarea class="textarea" id="message" rows="4" placeholder="Write your message..."></textarea>
+      </div>
+
+      <div class="button-group">
+        <button type="submit" class="button">
+          <span class="button2">Submit</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="form-overlay hidden"></div>
+
+  <script>
+    const form = document.querySelector('.form-contact');
+    const message = document.querySelector('.form-message');
+    const overlay = document.querySelector('.form-overlay');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      form.reset();
+
+      // Mostrar mensaje y overlay
+      message.classList.remove('hidden');
+      message.classList.add('show');
+      overlay.classList.remove('hidden');
+      overlay.classList.add('show');
+
+      setTimeout(() => {
+        // Ocultar mensaje y overlay
+        message.classList.remove('show');
+        message.classList.add('hidden');
+        overlay.classList.remove('show');
+        overlay.classList.add('hidden');
+      }, 3000); // Oculta después de 3 segundos
+    });
+  </script>
+
+</body>
+
+</html>

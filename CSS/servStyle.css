@@ -1,0 +1,243 @@
+.TituloPromo {
+    height: 172px;
+    position: relative;
+    z-index: 2;
+    top: 60px;
+    left: -30px;
+  }
+  .nubeDer {
+    width: 406px;
+    height: 172px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    object-fit:contain;
+    aspect-ratio: 406/172;
+  }
+  .serv {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    position: absolute;
+    left: 84px;
+    top: 0px;
+    width: 306px;
+    height: 36px;
+  }
+
+/* estilo de fichas*/
+.cards,
+.cards * {
+  box-sizing: border-box;
+}
+/* Estilos base ajustados para fondo oscuro + mood elegante */
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    row-gap: 48px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    padding: 0 60px;
+    margin-bottom: 48px;
+    justify-content: center;
+  }
+  
+  .card {
+    background: #E5E5E5;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex: 1;
+    min-width: 240px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 0 transparent;
+    position: relative;
+    max-width: 560px;
+    height: 380px;
+    flex: 1 1 300px;
+  }
+
+  .card:hover {
+  box-shadow: 0 0 12px rgba(204, 0, 0, 0.6),
+              0 0 24px rgba(204, 0, 0, 0.4);
+  border-color: rgba(204, 0, 0, 0.5);
+  transform: translateY(-5px);
+  animation: neonPulse 1.5s ease-in-out infinite;
+}
+  
+
+  
+  .image {
+    /*background: linear-gradient(to left, #2c2c2c, #1a1a1a);*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 500px;
+    height: 200px;
+    min-width: 160px;
+    overflow: hidden;
+    object-fit:contain ;
+    border-radius: 4px;
+    /* box-shadow: 0 0 6px rgba(102, 8, 8, 0.25); */
+  }
+  
+  
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: 1;
+    min-width: 160px;
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .title {
+    color:  #1e1e1e;
+    text-align: left;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    /* transition: text-shadow 0.3s ease; */
+  }
+  
+ 
+  .body-text {
+    color: #757575;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+  }
+
+  @keyframes neonPulse {
+    0% {
+      box-shadow: 0 0 6px rgba(255, 79, 79, 0.3), /* rojo más claro */
+                  0 0 12px rgba(255, 79, 79, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 12px rgba(255, 79, 79, 0.6),
+                  0 0 24px rgba(255, 79, 79, 0.4);
+    }
+    100% {
+      box-shadow: 0 0 6px rgba(255, 79, 79, 0.3),
+                  0 0 12px rgba(255, 79, 79, 0.2);
+    }
+  }
+   
+  .image-container {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .payment-icon {
+    width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin distorsionarse */
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .payment-card:hover .payment-icon {
+  transform: scale(1.05);
+  }
+
+  .payment-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .payment-card {
+    display: flex;
+    flex-direction: column;  /* Alinea los elementos en columna */
+    align-items: center;  /* Centra los elementos horizontalmente */
+    justify-content: center;  /* Centra los elementos verticalmente */
+    width: 300px;
+    border: 2px solid #E5E5E5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+  }
+
+  .payment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    animation: neonPulse 1.5s ease-in-out infinite;
+}
+  
+  
+  .payment-card .image-container {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .payment-card .payment-icon {
+    width: 100%;  /* Asegura que la imagen ocupe el 100% del contenedor */
+    height: auto;  /* Mantiene la relación de aspecto de la imagen */
+    object-fit: contain;  /* Mantiene la imagen dentro del contenedor sin distorsionar */
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .payment-card:hover .payment-icon {
+    transform: scale(1.05);
+  }
+  
+  .payment-card .body {
+    padding: 20px;
+  }
+  
+  .payment-card .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .payment-card .body-text {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  
+  

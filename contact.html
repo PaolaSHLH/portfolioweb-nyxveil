@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/repStyle.css">
+  <link rel="stylesheet" href="CSS/contStyle.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+  <link rel="icon" href="IMG/Png/Icon.png">
+  <title>Nyxveil</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+       <a href="index.html"> <img src="IMG/Png/Nombre.png" alt="Nombre de la marca"> </a> 
+    </div>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Inicio</a></li>
+            <li><a href="services.html" class="nav-link">Servicio</a></li>
+            <li><a href="contact.html" class="nav-link">Contacto</a></li>
+            <li><a href="about.html" class="nav-link">Sobre Nosotros</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <div class="overlay hidden"></div>
+  <div class="form-message">¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto 💌</div>
+
+  <div class="form-wrapper">
+    <form class="form-contact">
+      <div class="input-field">
+        <label class="label" for="name">Name</label>
+        <input class="input" type="text" id="name" placeholder="Your name" />
+      </div>
+  
+      <div class="input-field">
+        <label class="label" for="email">Email</label>
+        <input class="input" type="email" id="email" placeholder="you@example.com" />
+      </div>
+  
+      <div class="input-field">
+        <label class="label" for="subject">Subject</label>
+        <input class="input" type="text" id="subject" placeholder="Subject..." />
+      </div>
+  
+      <div class="textarea-field">
+        <label class="label" for="message">Message</label>
+        <textarea class="textarea" id="message" rows="4" placeholder="Write your message..."></textarea>
+      </div>
+  
+      <div class="button-group">
+        <button type="submit" class="button">
+          <span class="button2">Submit</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img class="logof" src="IMG/Png/nv.png" alt="Logo" />
+        <div class="social-icons">
+          <a href="https://x.com/Nyxveil__"><i class="fi fi-brands-twitter-alt"></i></a>
+          <a href="https://www.instagram.com/__nyxveil__/"> <i class="fi fi-brands-instagram"></i> </a> 
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Información de la pagina</h4>
+        <nav>
+          <a href="#">Inicio</a>
+          <a href="#">Servicios</a>
+          <a href="#">Sobre nosotros</a>
+          <a href="#">Contáctanos</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.querySelector('.form-contact');
+const message = document.querySelector('.form-message');
+const overlay = document.querySelector('.overlay');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  form.reset();
+
+  message.classList.remove('hidden');
+  message.classList.add('show');
+
+  overlay.classList.remove('hidden'); // MOSTRAR overlay
+
+  setTimeout(() => {
+    message.classList.remove('show');
+    message.classList.add('hidden');
+    overlay.classList.add('hidden'); // OCULTAR overlay
+  }, 3000);
+});
+
+  </script>
+  
+
+</body>
+
+</html>

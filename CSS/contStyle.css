@@ -1,0 +1,144 @@
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 16px;
+  min-height: 100vh;
+  font-family: 'Montserrat';
+}
+
+.form-contact {
+  background: #E5E5E5;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.input-field,
+.textarea-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  color: #1e1e1e;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.input,
+.textarea {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  color: #1e1e1e;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #e60023;
+  outline: none;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.button {
+  background: #2c2c2c;
+  border: 1px solid #2c2c2c;
+  border-radius: 8px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #e60023;
+  border-color: #e60023;
+  transform: scale(1.02);
+}
+
+.button2 {
+  color: #f5f5f5;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+
+@keyframes slideDownFade {
+  0% {
+    transform: translate(-50%, -70%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+.form-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.5s ease;
+  font-family: 'Montserrat';
+
+}
+
+.form-message.show {
+  animation: slideDownFade 0.4s ease forwards;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo gris oscuro semitransparente */
+  backdrop-filter: blur(2px); /* Efecto de desenfoque */
+  z-index: 998; /* Justo detrás del mensaje */
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
