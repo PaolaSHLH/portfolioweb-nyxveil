@@ -1,0 +1,29 @@
+.privacy-container {
+      max-width: 900px;
+      margin: 100px auto 60px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .privacy-container h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .privacy-container p {
+      margin-bottom: 20px;
+      line-height: 1.8;
+      font-size: 1.1em;
+    }
+
+    .privacy-container a {
+      color: #6f42c1;
+      text-decoration: none;
+    }
+
+    .privacy-container a:hover {
+      text-decoration: underline;
+    }
